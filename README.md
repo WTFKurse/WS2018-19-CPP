@@ -275,7 +275,7 @@ Die jeweiligen Tools sind abhängig von der Plattform (Windows, Linux, macOS). A
 
 https://cplusplus.wtf/clioninstall
 
-#### Lizensierung
+#### Lizenzierung
 
 :heart: Studierende können über das JetBrains Education Programm sämtliche Software des Herstellers nutzen. JetBrains bietet auch außerhalb von C++ interessante Software für den Studienalltag an.
 
