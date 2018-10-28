@@ -174,8 +174,8 @@ Der Wert lässt sich nicht innerhalb des Programms ändern.
 
 ```cpp
 const float Pi = 3.14159;
-const Kosten = 1.85;
-const Zeichen = 'a';
+const double Kosten = 1.85;
+const char Zeichen = 'a';
 ```
 
 ### Operatoren
