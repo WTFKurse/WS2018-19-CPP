@@ -360,11 +360,11 @@ else {
 
 Wird eine Anweisung **mehrmals nacheinander** ausgeführt, so handelt es sich um eine zyklische Wiederholung.
 
-| Typ                | Definition                                                                                                                |
-|--------------------|---------------------------------------------------------------------------------------------------------------------------|
-| Feste Schleife     | Besitzen eine festgelegte Anzahl von Schleifendurchläufen.                                                                |
-| Bedingte Schleifen | Iterieren so lange, bis eine getestete Bedingung wahr wird. Der Test kann am Anfang und Ende der Schleife sein.           |
-| Endlose Schleife   | Iterieren unendlich lang, bis ein bestimmter Mechanismus sie beendet (Warten auf Eingabe) Tastenkombination: Strg + Pause |
+| Typ                | Definition                                                                                                                					 |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Feste Schleife     | Besitzen eine festgelegte Anzahl von Schleifendurchläufen.                                                                					 |
+| Bedingte Schleifen | Iterieren so lange, bis eine getestete Bedingung wahr wird. Der Test kann am Anfang und Ende der Schleife sein.           					 |
+| Endlose Schleife   | Iterieren unendlich lang, bis ein bestimmter Mechanismus sie beendet (Warten auf Eingabe)<br/>Tastenkombination: ```Strg + Pause``` |
 
 
 #### Merkmale
@@ -395,11 +395,11 @@ for(A = 1; A <= 10; A = A + 2)
 
 **Was heißt das?**
 
-| Code           | Erklärung                                                                              |
-|----------------|----------------------------------------------------------------------------------------|
-| Feste Schleife | Schleife beginnt bei A = 1, Anfangswert ist 1                                          |
-| A <= 10        | Schleife wird solange ausgeführt, bis A = 10 --> danach abgebrochen „wie wird A = 10?“ |
-| A = A + 2      | bei jedem Schleifendurchlauf wird A um 2 erhöht, die Schrittweite um 2 erweitert       |
+| Code            | Erklärung                                                                                  |
+|-----------------|--------------------------------------------------------------------------------------------|
+| ```A = 1```  	  | Schleife beginnt bei A = 1, Anfangswert ist 1                                              |
+| ```A <= 10```   | Schleife wird solange ausgeführt, bis A = 10 --> danach abgebrochen<br/>„wie wird A = 10?“ |
+| ```A = A + 2``` | bei jedem Schleifendurchlauf wird A um 2 erhöht, die Schrittweite um 2 erweitert           |
 
 
 !> **Besonderheiten der Zählschleife**<br />Der Datentyp der Laufvariable ist nicht auf int beschränkt, jedoch müssen Startwert und Endwert gleichen Typs sein und zur Laufvariable kompatibel.
