@@ -307,16 +307,16 @@ if (Bedingung) {
 
 ```cpp
 if (Bedingung) {
-    Anweisung für ja
+    <Anweisung für ja>
 }
 else {
     <Anweisung für nein>
 }
 ```
 
-#### Zweistufige Auswahl
+#### Mehrstufige Auswahl
 
-**Bedingung mit einem positiven und negativen Zweig**
+**Bedingung mit einem positiven und geschachtelten negativen Zweig**
 
 ```cpp
 if (Bedingung) {
@@ -346,7 +346,7 @@ if (Bedingung) {
     <Anweisung für ja>
 }
 else if (Bedingung) {
-        <Anweisung für ja>
+    <Anweisung für ja>
 }
 else if (Bedingung) {
     <Anweisung für ja>
