@@ -282,3 +282,157 @@ https://cplusplus.wtf/clioninstall
 Die Anmeldung als Studierender erfolgt über die Webseite von JetBrains. Dafür ist die Verwendung der E-Mail-Adresse der TU Dresden (_@mailbox.tu-dresden.de_) notwendig.
 
 https://cplusplus.wtf/jetbrains
+
+
+### Kontrollstrukturen
+
+Bis zum aktuellen Stand waren die bisher erstellten Programm in ihrer Ablauffolge sehr simpel. Es handelte sich bei den Programmen ausschließlich um Sequenzen von Anweisungen, die nach und nach ausgeführt wurden. Im Prinzip handelte es sich um das EVA-Prinzip.
+
+In vielen Fällen lässt sich die lineare Programmstruktur nicht anwenden, da Anweisungen in eine Abhängigkeit gesetzt werden müssen. Realisiert wird dieser Programmablauf durch Auswahlstrukturen.
+
+
+#### Einstufige Auswahl
+
+**Bedingung mit einem positiven Zweig**
+
+```cpp
+if (Bedingung) {
+    <Anweisung für ja>
+}
+```
+
+#### Zweistufige Auswahl
+
+**Bedingung mit einem positiven und negativen Zweig**
+
+```cpp
+if (Bedingung) {
+    Anweisung für ja
+}
+else {
+    <Anweisung für nein>
+}
+```
+
+#### Zweistufige Auswahl
+
+**Bedingung mit einem positiven und negativen Zweig**
+
+```cpp
+if (Bedingung) {
+    <Anweisung für ja>
+}
+else (
+    if (Bedingung) {
+        <Anweisung für ja>
+    }
+
+    else {
+        if (Bedingung) {
+            <Anweisung für ja>
+        }
+
+        else {
+            <Anweisung für nein>
+        }
+    }
+}
+```
+
+_Alternative Variante_
+
+```cpp
+if (Bedingung) {
+    <Anweisung für ja>
+}
+else if (Bedingung) {
+        <Anweisung für ja>
+}
+else if (Bedingung) {
+    <Anweisung für ja>
+}
+else {
+    <Anweisung für nein>
+}
+```
+
+### Zyklische Strukturen (Schleifen)
+
+Wird eine Anweisung **mehrmals nacheinander** ausgeführt, so handelt es sich um eine zyklische Wiederholung.
+
+| Typ                | Definition                                                                                                                |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------|
+| Feste Schleife     | Besitzen eine festgelegte Anzahl von Schleifendurchläufen.                                                                |
+| Bedingte Schleifen | Iterieren so lange, bis eine getestete Bedingung wahr wird. Der Test kann am Anfang und Ende der Schleife sein.           |
+| Endlose Schleife   | Iterieren unendlich lang, bis ein bestimmter Mechanismus sie beendet (Warten auf Eingabe) Tastenkombination: Strg + Pause |
+
+
+#### Merkmale
+
+Bevor eine Schleife ausgelöst wird, muss ein Großteil der Variablen auf einem Anfangswert gesetzt werden.
+
+Diesen **Anfangswert (Vorbedingung)** kann man durch Abfrage von Eingangswerten erhalten oder durch Festlegen von Anfangswerten, die sich später innerhalb der Schleife verändern.
+
+!> Macht man das nicht, nimmt das Programm irgendwelche alte (irre) Werte an.
+
+#### for-Schleife
+
+- Es werden die Anzahl der Wiederholungen in einem Zähler festgehalten und bei Erreichen des Zählerendstandes eingestellt.
+- Anweisungen werden mindestens einmal ausgeführt, bis zum Erreichen des Endstartes (So lange, bis die Bedingung wahr geworden ist)
+- fehlt eine Bedingung, dann wahr
+- Anweisungsblöcke zwischen ```{ }```
+- ```var++``` (heißt Schleifendurchlauf +1)
+- ```var--``` (heißt Schleifendurchlauf -1)
+
+```cpp
+for(A = 1; A <= 10; A = A + 2)
+{
+    Anweisung1;
+    Anweisung2;
+    Anweisungn;
+}
+```
+
+**Was heißt das?**
+
+| Code           | Erklärung                                                                              |
+|----------------|----------------------------------------------------------------------------------------|
+| Feste Schleife | Schleife beginnt bei A = 1, Anfangswert ist 1                                          |
+| A <= 10        | Schleife wird solange ausgeführt, bis A = 10 --> danach abgebrochen „wie wird A = 10?“ |
+| A = A + 2      | bei jedem Schleifendurchlauf wird A um 2 erhöht, die Schrittweite um 2 erweitert       |
+
+
+!> **Besonderheiten der Zählschleife**<br />Der Datentyp der Laufvariable ist nicht auf int beschränkt, jedoch müssen Startwert und Endwert gleichen Typs sein und zur Laufvariable kompatibel.
+
+#### while-Schleife
+
+- Bedingung ist oft ein integer-Ausdruck
+-	Separater Schleifenzähler erforderlich
+- Anweisungsblöcke zwischen ```{ }```
+
+```cpp
+while(A <= 10)
+{
+    Anweisung1;
+    Anweisung2;
+    Anweisungn;
+}
+```
+
+#### do-while-Schleife
+
+-	Bedingung ist ein integer-Ausdruck
+-	Wiederholung der Anweisungen solange Bedingung richtig ist
+- Anzahl der Schleifendurchläufe unbekannt
+-	Auswertung der Bedingung im Schleifenfuß
+- Anweisungsblöcke zwischen ```{ }```
+
+```cpp
+char Zeichen;
+do {
+    Anweisung1;
+    Anweisung2;
+    Anweisungn;
+}
+while((Zeichen == 'j' ) || Zeichen == 'J'));
+```
